@@ -1,0 +1,19 @@
+package com.learning.MultiThreadConcur.ThreadMemoryModel;
+
+import com.learning.App;
+
+public class MyRunnable implements Runnable{
+
+    // Same count is shared between Threads
+    private int count = 0 ;
+
+    @Override
+    public void run(){
+
+        for(int i=0 ; i<1_000_000 ; i++){
+            this.count++;
+
+        }
+        System.out.println(Thread.currentThread().getName() + "-> " + this.count);
+    }
+}
