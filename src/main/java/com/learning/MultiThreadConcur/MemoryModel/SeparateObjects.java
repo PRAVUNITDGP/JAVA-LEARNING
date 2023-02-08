@@ -11,6 +11,7 @@ public class SeparateObjects {
 
         thread1.start();
         thread2.start();
+        //
     }
 
     /*
